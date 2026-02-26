@@ -6,39 +6,43 @@ print("4 - Divisão")
 print("5 - Raiz Quadrada")
 
 opcao = input("Escolha uma opção: ")
+
 if opcao == '1':
-    a = input("entre com o primeiro valor: ")
-    a = int(a)
-    b = input("entre com o segundo valor: ")
-    b = int(b)
+    a = int(input("Entre com o primeiro valor: "))
+    b = int(input("Entre com o segundo valor: "))
     c = a + b
-    print("\nresultado: ",c)
+    print("\nResultado:", c)
+
 elif opcao == '2':
-    a = input("entre com o primeiro valor: ")
-    a = int(a)
-    b = input("entre com o segundo valor: ")
-    b = int(b)
+    a = int(input("Entre com o primeiro valor: "))
+    b = int(input("Entre com o segundo valor: "))
     c = a - b
-    print("\nresultado: ",c)
+    print("\nResultado:", c)
+
 elif opcao == '3':
-    a = input("entre com o primeiro valor: ")
-    a = int(a)
-    b = input("entre com o segundo valor: ")
-    b = int(b)
+    a = int(input("Entre com o primeiro valor: "))
+    b = int(input("Entre com o segundo valor: "))
     c = a * b
-    print("\nresultado: ",c) 
+    print("\nResultado:", c)
+
 elif opcao == '4':
-    a = input("entre com o primeiro valor: ")
-    a = int(a)
-    b = input("entre com o segundo valor: ")
-    b = int(b)
-    c = a / b
-    print("\nresultado: ",c)
+    a = int(input("Entre com o primeiro valor: "))
+    b = int(input("Entre com o segundo valor: "))
+    
+    if b == 0:
+        print("\nErro: divisão por zero não é permitida!")
+    else:
+        c = a / b
+        print("\nResultado:", c)
 
 elif opcao == '5':
-        a = input("Digite o valor: ")
-        a = int(a)
-        c = a ** 0.5
+    a = int(input("Digite o valor: "))
     
-        print("\nresultado: ",c)
-        
+    if a < 0:
+        print("\nErro: não existe raiz real de número negativo!")
+    else:
+        c = a ** 0.5
+        print("\nResultado:", c)
+
+else:
+    print("\nOpção inválida!")
